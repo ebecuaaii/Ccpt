@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@theme {
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+    /* Kaleidoscope Brand Palette */
+    --color-brand-red: #912121;
+    --color-brand-red-light: #A52A2A;
+    --color-brand-red-dark: #6B1616;
+
+    /* UI Colors */
+    --color-surface: #F9FAFB;
+    --color-border-subtle: #F3F4F6;
+    --color-border-main: #E5E7EB;
+}
+
+/* --- Component Utilities --- */
+
+@utility top-bar {
+    @apply bg-brand-red text-white text-[10px] md:text-xs py-2 px-4 md:px-10 flex justify-between items-center;
+}
+
+@utility main-header {
+    @apply bg-white border-b border-border-main py-4 px-4 md:px-10;
+}
+
+@utility search-box {
+    @apply relative w-full md:w-96;
+}
+
+@utility search-input {
+    @apply w-full border border-gray-300 rounded-full py-2 px-10 focus:outline-none focus:ring-1 focus:ring-brand-red transition-all;
+}
+
+@utility tab-container {
+    @apply bg-white rounded-md shadow-sm border border-gray-100 mb-6 overflow-x-auto flex min-w-max;
+}
+
+@utility tab-btn {
+    @apply px-6 py-3 font-medium transition-colors text-gray-600 hover:text-brand-red cursor-pointer;
+}
+
+@utility tab-btn-active {
+    @apply bg-brand-red text-white hover:text-white;
+}
+
+@utility order-card {
+    @apply bg-white border border-border-main rounded-lg shadow-sm overflow-hidden mb-8;
+}
+
+@utility order-header {
+    @apply bg-gray-50 px-6 py-4 flex items-center space-x-3 border-b border-border-main;
+}
+
+@utility product-item {
+    @apply flex items-center py-4 border-b border-border-subtle last:border-0;
+}
+
+@utility product-img {
+    @apply w-20 h-20 rounded object-cover border border-border-main;
+}
+
+@utility footer-container {
+    @apply bg-brand-red text-white mt-12 py-12;
+}
+
+@utility social-icon {
+    @apply w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-brand-red transition-all cursor-pointer;
+}
+
+/* --- Base Styles --- */
+body {
+    @apply bg-surface antialiased;
+}
+
+/* Hide scrollbar for tab container but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
