@@ -1,0 +1,145 @@
+<header class="header">
+    <!-- Top Bar -->
+    <div class="header-topbar">
+        <div class="container">
+            <div class="topbar-inner">
+                <div class="topbar-left">
+                    <span class="topbar-item">📞 1800 9999 (Miễn phí)</span>
+                    <span class="topbar-item">🚚 Miễn phí vận chuyển đơn từ 200k</span>
+                </div>
+                <div class="topbar-right">
+                    <a href="#" class="topbar-link">Theo dõi đơn hàng</a>
+                    <a href="#" class="topbar-link">Hệ thống cửa hàng</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <div class="header-main">
+        <div class="container">
+            <div class="header-inner">
+                <!-- Mobile Toggle -->
+                <button class="menu-toggle"
+                    onclick="document.querySelector('.mobile-nav').classList.toggle('active'); this.classList.toggle('active')">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">📚</div>
+                    <div class="logo-text">
+                        <span class="logo-name">Web Bán <span>Truyện</span></span>
+                        <span class="logo-tagline">Thiên đường truyện tranh</span>
+                    </div>
+                </a>
+
+                <!-- Search -->
+                <div class="header-search">
+                    <form class="search-form" onsubmit="handleSearch(event)">
+                        <select class="search-category" id="search-cat">
+                            <option value="">Tất cả</option>
+                            <option value="manga">Manga</option>
+                            <option value="manhwa">Manhwa</option>
+                            <option value="comic">Truyện VN</option>
+                        </select>
+                        <input type="text" class="search-input" id="search-input"
+                            placeholder="Tìm tên truyện, tác giả...">
+                        <button type="submit" class="search-btn">🔍</button>
+                    </form>
+                </div>
+
+                <!-- Actions -->
+                <div class="header-actions">
+                    <a href="#" class="action-btn" title="Yêu thích">
+                        <span class="action-icon">🤍</span>
+                        <span class="action-label">Yêu thích</span>
+                    </a>
+                    <a href="cart.html" class="action-btn" title="Giỏ hàng">
+                        <span class="action-icon">
+                            🛒
+                            <span class="badge-count" id="cart-badge" style="display:none">0</span>
+                        </span>
+                        <span class="action-label">Giỏ hàng</span>
+                    </a>
+                    <a href="login.html" class="action-btn" title="Tài khoản">
+                        <span class="action-icon">👤</span>
+                        <span class="action-label">Đăng nhập</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="header-nav">
+        <div class="container">
+            <div class="nav-inner">
+                <div class="nav-item">
+                    <a href="index.html" class="nav-link">🏠 Trang chủ</a>
+                </div>
+                <div class="nav-item">
+                    <a href="products.html" class="nav-link">📚 Manga <span style="font-size:.7rem">▾</span></a>
+                    <div class="nav-dropdown">
+                        <a href="products.html?category=manga" class="dropdown-item"><span
+                                class="dropdown-icon">🇯🇵</span> Manga Nhật Bản</a>
+                        <a href="products.html?category=manhwa" class="dropdown-item"><span
+                                class="dropdown-icon">🇰🇷</span> Manhwa Hàn Quốc</a>
+                        <a href="products.html?category=manhua" class="dropdown-item"><span
+                                class="dropdown-icon">🇨🇳</span> Manhua Trung Quốc</a>
+                        <a href="products.html?category=comic" class="dropdown-item"><span
+                                class="dropdown-icon">🇻🇳</span> Truyện tranh VN</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="products.html?filter=new" class="nav-link">✨ Mới về <span class="nav-hot">HOT</span></a>
+                </div>
+                <div class="nav-item">
+                    <a href="products.html?filter=bestseller" class="nav-link">🔥 Bán chạy</a>
+                </div>
+                <div class="nav-item">
+                    <a href="products.html?filter=sale" class="nav-link" style="color:#e63946">💰 Khuyến mãi</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">📖 Thể loại <span style="font-size:.7rem">▾</span></a>
+                    <div class="nav-dropdown">
+                        <a href="products.html?genre=action" class="dropdown-item"><span class="dropdown-icon">⚔️</span>
+                            Hành động</a>
+                        <a href="products.html?genre=romance" class="dropdown-item"><span
+                                class="dropdown-icon">💕</span> Tình cảm</a>
+                        <a href="products.html?genre=comedy" class="dropdown-item"><span class="dropdown-icon">😂</span>
+                            Hài hước</a>
+                        <a href="products.html?genre=horror" class="dropdown-item"><span class="dropdown-icon">👻</span>
+                            Kinh dị</a>
+                        <a href="products.html?genre=fantasy" class="dropdown-item"><span
+                                class="dropdown-icon">🧙</span> Giả tưởng</a>
+                    </div>
+                </div>
+                <div class="nav-item" style="margin-left:auto">
+                    <a href="#" class="nav-link">📞 Liên hệ</a>
+                </div>
+            </div>
+
+            <!-- Mobile Nav -->
+            <div class="mobile-nav">
+                <a href="index.html" class="mobile-nav-link">🏠 Trang chủ</a>
+                <a href="products.html" class="mobile-nav-link">📚 Tất cả truyện</a>
+                <a href="products.html?filter=new" class="mobile-nav-link">✨ Mới về</a>
+                <a href="products.html?filter=bestseller" class="mobile-nav-link">🔥 Bán chạy</a>
+                <a href="products.html?filter=sale" class="mobile-nav-link">💰 Khuyến mãi</a>
+                <a href="cart.html" class="mobile-nav-link">🛒 Giỏ hàng</a>
+                <a href="login.html" class="mobile-nav-link">👤 Đăng nhập</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+    function handleSearch(e) {
+        e.preventDefault();
+        const q = document.getElementById('search-input')?.value?.trim();
+        if (q) window.location.href = `products.html?q=${encodeURIComponent(q)}`;
+    }
+</script>

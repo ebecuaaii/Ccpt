@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán - Web Bán Truyện</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <div class="container" style="padding-top: var(--space-6); padding-bottom: var(--space-16);">
+        <div class="breadcrumb">
+            <a href="index.html">Trang chủ</a>
+            <span class="sep"></span>
+            <a href="cart.html">Giỏ hàng</a>
+            <span class="sep"></span>
+            <span class="current">Thanh toán</span>
+        </div>
+
+        <!-- Progress steps -->
+        <div class="checkout-steps">
+            <div class="step-item done">
+                <div class="step-circle" style="background:var(--primary);color:white;border:none;">1</div>
+                <div class="step-info">
+                    <div class="step-name" style="color:var(--primary);">Giỏ hàng</div>
+                </div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-item active">
+                <div class="step-circle">2</div>
+                <div class="step-info">
+                    <div class="step-name">Thanh toán</div>
+                </div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-item">
+                <div class="step-circle">3</div>
+                <div class="step-info">
+                    <div class="step-name">Hoàn tất</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="checkout-layout">
+            <!-- Main Form -->
+            <div class="checkout-main">
+                <div class="form-card">
+                    <div class="form-card-header"
+                        style="background: var(--primary); color: white; border-radius: var(--radius-lg) var(--radius-lg) 0 0; border-bottom: none;">
+                        <div class="form-step-num" style="background: white; color: var(--primary);">1</div>
+                        <h3 style="color: white; margin: 0;">Thông tin nhận hàng</h3>
+                    </div>
+                    <div class="form-card-body">
+                        <div class="form-row full">
+                            <div class="form-group">
+                                <label class="form-label">Họ và tên</label>
+                                <input type="text" class="form-control" placeholder="Nhập họ tên người nhận">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Số điện thoại</label>
+                                <input type="tel" class="form-control" placeholder="Ví dụ: 0901234567">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="Để nhận thông báo đơn hàng">
+                            </div>
+                        </div>
+                        <div class="form-row full">
+                            <div class="form-group">
+                                <label class="form-label">Địa chỉ chi tiết</label>
+                                <input type="text" class="form-control" placeholder="Số nhà, đường, xóm/ấp">
+                            </div>
+                        </div>
+                        <div class="form-row cols-3">
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option>Tỉnh / Thành phố</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option>Quận / Huyện</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option>Phường / Xã</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row full">
+                            <div class="form-group">
+                                <label class="form-label">Ghi chú (Tùy chọn)</label>
+                                <textarea class="form-control" rows="3"
+                                    placeholder="Ghi chú thêm về đơn hàng..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <div class="form-card-header"
+                        style="background: var(--primary); color: white; border-radius: var(--radius-lg) var(--radius-lg) 0 0; border-bottom: none;">
+                        <div class="form-step-num" style="background: white; color: var(--primary);">2</div>
+                        <h3 style="color: white; margin: 0;">Phương thức vận chuyển</h3>
+                    </div>
+                    <div class="form-card-body">
+                        <div class="shipping-options">
+                            <label class="shipping-option selected">
+                                <div class="shipping-radio"></div>
+                                <div class="shipping-info">
+                                    <div class="shipping-name">Giao hàng tiêu chuẩn</div>
+                                    <div class="shipping-estimate">Dự kiến giao: 2-4 ngày làm việc</div>
+                                </div>
+                                <div class="shipping-price">30.000đ</div>
+                            </label>
+                            <label class="shipping-option">
+                                <div class="shipping-radio"></div>
+                                <div class="shipping-info">
+                                    <div class="shipping-name">Giao hàng hỏa tốc</div>
+                                    <div class="shipping-estimate">Nhận hàng trong vòng 24h</div>
+                                </div>
+                                <div class="shipping-price">50.000đ</div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <div class="form-card-header"
+                        style="background: var(--primary); color: white; border-radius: var(--radius-lg) var(--radius-lg) 0 0; border-bottom: none;">
+                        <div class="form-step-num" style="background: white; color: var(--primary);">3</div>
+                        <h3 style="color: white; margin: 0;">Phương thức thanh toán</h3>
+                    </div>
+                    <div class="form-card-body">
+                        <div class="payment-methods">
+                            <label class="payment-method selected">
+                                <div class="payment-icon-box"
+                                    style="color:var(--primary);font-weight:bold; background: white; border: 1px solid var(--primary);">
+                                    COD</div>
+                                <div class="shipping-info">
+                                    <div class="payment-name">Thanh toán khi nhận hàng (COD)</div>
+                                    <div class="payment-desc">Thanh toán bằng tiền mặt khi giao hàng</div>
+                                </div>
+                                <div class="shipping-radio"></div>
+                            </label>
+                            <label class="payment-method">
+                                <div class="payment-icon-box" style="color:var(--primary);font-weight:bold;">VNPay</div>
+                                <div class="shipping-info">
+                                    <div class="payment-name">Thanh toán qua ví VNPay / Thẻ ATM</div>
+                                    <div class="payment-desc">Quét mã QR tiện lợi, an toàn</div>
+                                </div>
+                                <div class="shipping-radio"></div>
+                            </label>
+                            <label class="payment-method">
+                                <div class="payment-icon-box" style="color:#00509E;font-weight:bold;">Momo</div>
+                                <div class="shipping-info">
+                                    <div class="payment-name">Thanh toán qua ví MoMo</div>
+                                    <div class="payment-desc">Nhập số điện thoại để thanh toán</div>
+                                </div>
+                                <div class="shipping-radio"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Summary -->
+            <div class="checkout-sidebar">
+                <div class="order-summary-card">
+                    <h3 class="order-summary-title"
+                        style="background: var(--primary); color: white; padding: var(--space-4); margin: calc(var(--space-6) * -1) calc(var(--space-6) * -1) var(--space-4); border-radius: var(--radius-lg) var(--radius-lg) 0 0; text-align: center; border-bottom: none;">
+                        TÓM TẮT ĐƠN HÀNG</h3>
+                    <div class="order-items">
+                        <div class="order-item">
+                            <div class="order-item-img">
+                                <img src="https://via.placeholder.com/150x200?text=Truy%E1%BB%87n"
+                                    alt="Thám tử lừng danh Conan - Tập 100">
+                            </div>
+                            <div class="order-item-name">Thám tử lừng danh Conan - Tập 100</div>
+                            <div class="order-item-qty">x1</div>
+                            <div class="order-item-total">25.000đ</div>
+                        </div>
+                        <div class="order-item">
+                            <div class="order-item-img">
+                                <img src="https://via.placeholder.com/150x200?text=Truy%E1%BB%87n"
+                                    alt="One Piece - Tập 103">
+                            </div>
+                            <div class="order-item-name">One Piece - Tập 103</div>
+                            <div class="order-item-qty">x2</div>
+                            <div class="order-item-total">40.000đ</div>
+                        </div>
+                    </div>
+
+                    <div
+                        style="border-top: 1px dashed var(--gray-200); padding-top: var(--space-4); margin-top: var(--space-4);">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-sm text-gray">Tạm tính</span>
+                            <span class="text-sm font-bold">105.000đ</span>
+                        </div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-sm text-gray">Phí vận chuyển</span>
+                            <span class="text-sm font-bold">30.000đ</span>
+                        </div>
+                        <div class="flex justify-between mb-4">
+                            <span class="text-sm text-gray">Khuyến mãi</span>
+                            <span class="text-sm font-bold text-primary">-15.000đ</span>
+                        </div>
+                        <div class="flex justify-between items-center"
+                            style="border-top: 1px solid var(--gray-200); padding-top: var(--space-4);">
+                            <span class="font-bold text-lg">Tổng cộng</span>
+                            <span class="price-new" style="font-size: 1.8rem;">120.000đ</span>
+                        </div>
+                        <div class="text-right mt-2 text-sm text-gray">(Đã bao gồm VAT)</div>
+                    </div>
+
+                    <button class="btn w-full mt-6 btn-lg"
+                        style="background: var(--primary); color: white; border-radius: 0; font-weight: bold; border: none;"
+                        onclick="window.location.href='order_success.html'">
+                        ĐẶT HÀNG NGAY
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Toggle logic for options
+        document.querySelectorAll('.shipping-option').forEach(opt => {
+            opt.addEventListener('click', () => {
+                document.querySelectorAll('.shipping-option').forEach(o => o.classList.remove('selected'));
+                opt.classList.add('selected');
+            });
+        });
+
+        document.querySelectorAll('.payment-method').forEach(opt => {
+            opt.addEventListener('click', () => {
+                document.querySelectorAll('.payment-method').forEach(o => o.classList.remove('selected'));
+                opt.classList.add('selected');
+            });
+        });
+    </script>
+</body>
+
+</html>
