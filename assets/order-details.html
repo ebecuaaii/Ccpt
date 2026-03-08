@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết đơn hàng - Kaleidoscope</title>
+    <!-- Thêm script Tailwind v4 để load class -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/order-details.css" />
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <!-- Top Bar -->
+    <nav class="bg-[#912121] text-white text-[10px] md:text-xs py-2 px-4 md:px-10 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+            <div class="flex space-x-2">
+                <img src="assets/images/facebook.png" alt="FB"
+                    class="w-4 h-4 cursor-pointer hover:opacity-80 object-cover">
+                <img src="assets/images/instagram.png" alt="IG"
+                    class="w-4 h-4 cursor-pointer hover:opacity-80 object-cover">
+                <img src="assets/images/x.png" alt="TW" class="w-4 h-4 cursor-pointer hover:opacity-80 object-cover">
+            </div>
+            <a href="#" class="hover:underline">Về Kaleidoscope</a>
+        </div>
+        <div class="flex items-center space-x-1">
+            <span>Contact: (+84) 97 182 50 26</span>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 py-4 px-4 md:px-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-8">
+                <div class="flex flex-col items-center">
+                    <img src="assets/images/logo.png" alt="Kaleidoscope Logo" class="h-12 w-auto object-contain">
+                </div>
+                <div class="hidden md:flex items-center space-x-3 border-l pl-8 border-gray-300">
+                    <div class="p-2 border border-gray-200 rounded">
+                        <span class="text-[#912121] font-bold">📦</span>
+                    </div>
+                    <h1 class="text-2xl font-bold text-gray-700">Đơn hàng của tôi</h1>
+                </div>
+            </div>
+
+            <div class="relative w-full md:w-96">
+                <input type="text" placeholder="Tìm kiếm đơn hàng"
+                    class="w-full border border-gray-300 rounded-full py-2 px-10 focus:outline-none focus:ring-1 focus:ring-[#912121]" />
+                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">🔍</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-4 py-6">
+        <!-- Breadcrumbs -->
+        <nav class="text-sm text-gray-500 mb-6 flex items-center space-x-2">
+            <a href="orders.html" class="hover:text-[#912121]">Trang chủ</a>
+            <span>»</span>
+            <a href="orders.html" class="hover:text-[#912121]">Đơn hàng của tôi</a>
+            <span>»</span>
+            <span class="text-gray-800 font-medium">Chi tiết đơn hàng</span>
+        </nav>
+
+        <!-- Order Detail Container -->
+        <article class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden p-6 mb-8">
+            <div
+                class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-200 pb-4 mb-4 gap-4">
+                <div>
+                    <h2 class="text-xl font-bold flex items-center space-x-2">
+                        <span class="text-[#912121]">📦</span>
+                        <span>Mã đơn hàng: SPX11112221111324124</span>
+                    </h2>
+                    <p class="text-sm text-gray-500 mt-1">Ngày đặt: 08/03/2026 08:30</p>
+                </div>
+                <div class="bg-[#912121] text-white px-4 py-2 rounded-full text-sm font-medium">
+                    Chờ xác nhận
+                </div>
+            </div>
+
+            <!-- Product List -->
+            <div class="divide-y divide-gray-100">
+                <div class="flex items-center py-4 group">
+                    <img src="https://picsum.photos/seed/miku1/200/200" alt="Miku figure"
+                        class="w-20 h-20 rounded object-cover border border-gray-200" referrerPolicy="no-referrer">
+                    <div class="ml-4 flex-grow">
+                        <h3 class="font-bold text-gray-800 transition-colors">Miku figure superwife for wibu</h3>
+                        <p class="text-sm text-gray-400">1m52 version</p>
+                        <p class="text-sm text-gray-600">1.500.000 đ x1</p>
+                    </div>
+                    <div class="text-right font-bold text-[#912121]">1.500.000 đ</div>
+                </div>
+                <div class="flex items-center py-4 group">
+                    <img src="https://picsum.photos/seed/miku2/200/200" alt="Miku figure"
+                        class="w-20 h-20 rounded object-cover border border-gray-200" referrerPolicy="no-referrer">
+                    <div class="ml-4 flex-grow">
+                        <h3 class="font-bold text-gray-800 transition-colors">Miku figure superwife for wibu</h3>
+                        <p class="text-sm text-gray-400">1m52 version</p>
+                        <p class="text-sm text-gray-600">1.500.000 đ x1</p>
+                    </div>
+                    <div class="text-right font-bold text-[#912121]">1.500.000 đ</div>
+                </div>
+                <!-- Adding more products as in orders to match total -->
+                <div class="flex items-center py-4 group">
+                    <img src="https://picsum.photos/seed/miku3/200/200" alt="Miku figure"
+                        class="w-20 h-20 rounded object-cover border border-gray-200" referrerPolicy="no-referrer">
+                    <div class="ml-4 flex-grow">
+                        <h3 class="font-bold text-gray-800 transition-colors">Miku figure superwife for wibu</h3>
+                        <p class="text-sm text-gray-400">1m52 version</p>
+                        <p class="text-sm text-gray-600">1.500.000 đ x1</p>
+                    </div>
+                    <div class="text-right font-bold text-[#912121]">1.500.000 đ</div>
+                </div>
+            </div>
+
+            <!-- Order Summary Info -->
+            <div class="mt-6 pt-6 border-t border-gray-200 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Shipping Info -->
+                <div>
+                    <h3 class="font-bold text-gray-800 mb-4 border-l-4 border-[#912121] pl-2">Thông tin nhận hàng</h3>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p><span class="font-medium text-gray-800">Người nhận:</span> Nguyễn Văn Trúc</p>
+                        <p><span class="font-medium text-gray-800">Số điện thoại:</span> 097 182 50 26</p>
+                        <p><span class="font-medium text-gray-800">Địa chỉ:</span> Khu công nghệ cao, Phường Tăng Nhơn
+                            Phú, Thành phố Thủ Đức, TP.HCM</p>
+                        <p><span class="font-medium text-gray-800">Hình thức giao hàng:</span> Giao hàng tiêu chuẩn</p>
+                    </div>
+                </div>
+
+                <!-- Payment Summary -->
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-bold text-gray-800 mb-4 border-l-4 border-[#912121] pl-2">Thanh toán</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between text-gray-600">
+                            <span>Tạm tính (3 sản phẩm)</span>
+                            <span>4.500.000 đ</span>
+                        </div>
+                        <div class="flex justify-between text-gray-600">
+                            <span>Phí giao hàng</span>
+                            <span>30.000 đ</span>
+                        </div>
+                        <div class="flex justify-between text-gray-600">
+                            <span>Giảm giá</span>
+                            <span>-30.000 đ</span>
+                        </div>
+                        <div class="flex justify-between items-center pt-3 border-t border-gray-200 mt-2">
+                            <span class="font-medium text-gray-800">Tổng cộng</span>
+                            <span class="text-2xl font-bold text-[#912121]">4.500.000 đ</span>
+                        </div>
+                        <div class="text-right text-gray-500 text-xs mt-1">
+                            (Đã bao gồm VAT nếu có)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="mt-8 flex justify-end gap-4">
+                <a href="orders.html"
+                    class="px-6 py-2 border border-gray-300 rounded text-gray-600 hover:bg-gray-50 transition-colors font-medium">
+                    Quay lại
+                </a>
+                <button
+                    class="px-6 py-2 bg-[#912121] text-white rounded hover:bg-[#a12828] transition-colors font-medium">
+                    Đánh giá sản phẩm
+                </button>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#912121] text-white mt-12 py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-10">
+            <div class="flex flex-col space-y-4">
+                <div class="flex items-center space-x-3">
+                    <img src="assets/images/logo.png" alt="Kaleidoscope Logo"
+                        class="h-16 w-auto object-contain bg-white p-2 rounded">
+                </div>
+                <p class="text-sm text-white/70">Khám phá thế giới đa sắc màu cùng Kaleidoscope.</p>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-lg mb-4 uppercase text-white/90">Liên hệ</h3>
+                <ul class="text-sm space-y-4 text-white/80">
+                    <li class="flex items-start">
+                        <span class="mr-3 mt-0.5">📍</span>
+                        <span>Khu công nghệ cao, Phường Tăng Nhơn Phú, Thành phố Thủ Đức, TP.HCM</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="mr-3">📞</span>
+                        <span>0915 140 329 - 097 182 50 26</span>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="mr-3">✉️</span>
+                        <span>info@kaleidoscope.vn</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-lg mb-4 uppercase text-white/90">Giới thiệu</h3>
+                <ul class="text-sm space-y-2 text-white/80">
+                    <li class="hover:translate-x-1 transition-transform cursor-pointer">Về Kaleidoscope</li>
+                    <li class="hover:translate-x-1 transition-transform cursor-pointer">Tuyển dụng</li>
+                    <li class="hover:translate-x-1 transition-transform cursor-pointer">Liên hệ với chúng tôi</li>
+                    <li class="hover:translate-x-1 transition-transform cursor-pointer">Tra cứu đơn hàng</li>
+                    <li class="hover:translate-x-1 transition-transform cursor-pointer">Hệ thống cửa hàng</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-lg mb-4 uppercase text-white/90">Chính sách</h3>
+                <ul class="text-sm space-y-2 text-white/80 mb-6">
+                    <li class="hover:translate-x-1 transition-transform cursor-pointer">Chính sách bảo mật</li>
+                    <li class="hover:translate-x-1 transition-transform cursor-pointer">Chính sách đổi trả/hoàn tiền
+                    </li>
+                    <li class="hover:translate-x-1 transition-transform cursor-pointer">Chính sách thanh toán/vận chuyển
+                    </li>
+                </ul>
+                <h3 class="font-bold text-lg mb-4 uppercase text-white/90">Kết nối MXH</h3>
+                <div class="flex space-x-3">
+                    <img src="assets/images/facebook.png" alt="FB"
+                        class="w-8 h-8 rounded-full border border-white/20 object-cover cursor-pointer hover:opacity-80 transition-opacity bg-white">
+                    <img src="assets/images/instagram.png" alt="IG"
+                        class="w-8 h-8 rounded-full border border-white/20 object-cover cursor-pointer hover:opacity-80 transition-opacity bg-white">
+                    <img src="assets/images/x.png" alt="TW"
+                        class="w-8 h-8 rounded-full border border-white/20 object-cover cursor-pointer hover:opacity-80 transition-opacity bg-white">
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/10 mt-12 pt-8 text-center text-xs text-white/60">
+            COPYRIGHTS © 2026 by <span class="font-bold text-white">Kaleidoscope</span>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
