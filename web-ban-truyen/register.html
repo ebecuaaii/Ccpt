@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Đăng ký - Kaleidoscope</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/register.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="register-page">
+
+  <div class="register-container">
+
+    <!-- ===== LEFT: Form ===== -->
+    <div class="register-left">
+      <h1 class="register-title">Tạo tài khoản</h1>
+      <p class="register-subtitle">Tham gia cộng đồng yêu sách ngay hôm nay</p>
+
+      <form id="register-form" autocomplete="off">
+
+        <!-- Họ và tên -->
+        <div class="form-group">
+          <label for="fullname">Họ và tên</label>
+          <div class="input-wrapper">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" id="fullname" name="fullname" placeholder="" required>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <div class="input-wrapper">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email" id="email" name="email" placeholder="" required>
+          </div>
+        </div>
+
+        <!-- Số điện thoại -->
+        <div class="form-group">
+          <label for="phone">Số điện thoại</label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-phone"></i>
+            <input type="tel" id="phone" name="phone" placeholder="" required>
+          </div>
+        </div>
+
+        <!-- Mật khẩu -->
+        <div class="form-group">
+          <label for="password">Mật khẩu</label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" name="password" placeholder="" required>
+          </div>
+        </div>
+
+        <!-- Xác nhận mật khẩu -->
+        <div class="form-group">
+          <label for="confirm-password">Xác nhận mật khẩu</label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="" required>
+          </div>
+        </div>
+
+        <!-- Đồng ý điều khoản -->
+        <div class="form-group form-agree">
+          <label class="checkbox-label">
+            <input type="checkbox" id="agree" name="agree" required>
+            <span>Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách bảo mật</a></span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn-register">Đăng ký</button>
+      </form>
+
+      <!-- Divider -->
+      <div class="divider">
+        <span>Hoặc đăng ký với</span>
+      </div>
+
+      <!-- Social buttons -->
+      <div class="social-buttons">
+        <button type="button" class="btn-social btn-google">
+          <i class="fa-brands fa-google"></i> Google
+        </button>
+        <button type="button" class="btn-social btn-facebook">
+          <i class="fa-brands fa-facebook-f"></i> Facebook
+        </button>
+      </div>
+
+      <p class="login-link">Đã có tài khoản ? <a href="login.html">Đăng nhập</a></p>
+    </div>
+
+    <!-- ===== RIGHT: Branding ===== -->
+    <div class="register-right">
+      <div class="brand-content">
+        <div class="brand-logo">
+          <img src="assets/images/logo/logo.png" alt="Kaleidoscope Logo" width="90" height="90">
+        </div>
+
+        <h2 class="brand-name">Kaleidoscope</h2>
+        <p class="brand-tagline">Bởi vì sách là thế giới</p>
+
+        <p class="brand-desc">
+          Khám phá thế giới manga, light novel và merch đa dạng.
+          Tham gia cùng hàng nghìn độc giả yêu thích truyện tranh Nhật Bản.
+        </p>
+
+        <ul class="brand-benefits">
+          <li>
+            <span class="benefit-icon"><i class="fa-solid fa-check"></i></span>
+            <div>
+              <strong>Ưu đãi độc quyền</strong>
+              <p>Giảm giá đặc biệt dành riêng cho thành viên.</p>
+            </div>
+          </li>
+          <li>
+            <span class="benefit-icon"><i class="fa-solid fa-check"></i></span>
+            <div>
+              <strong>Tích điểm thưởng</strong>
+              <p>Mỗi đơn hàng đều được tích điểm đổi quà.</p>
+            </div>
+          </li>
+          <li>
+            <span class="benefit-icon"><i class="fa-solid fa-check"></i></span>
+            <div>
+              <strong>Thông báo sớm</strong>
+              <p>Nhận thông tin về sách mới và flash sale.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
