@@ -1,0 +1,125 @@
+/* Breadcrumb */
+.breadcrumb-container {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.breadcrumb a {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-color);
+}
+
+.breadcrumb i {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+/* Page Section Title (Red Bar) */
+.page-title-bar {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 12px 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* News Section */
+.news-banner {
+    margin-bottom: 40px;
+}
+
+.news-banner img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 70px;
+}
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-image {
+    width: 100%;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.news-meta {
+    display: flex;
+    gap: 25px;
+    color: #333;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    font-weight: 600;
+}
+
+.news-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.news-meta-item i {
+    font-size: 1.25rem;
+    color: #444;
+}
+
+.news-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 12px;
+    line-height: 1.45;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.news-title:hover {
+    color: var(--primary-color);
+}
+
+.news-excerpt {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
