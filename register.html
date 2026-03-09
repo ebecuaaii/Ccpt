@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký - Kaleidoscope</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: stretch;
+        }
+
+        .register-container {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        /* ===== LEFT SIDE - FORM ===== */
+        .form-side {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 60px;
+            background: #fff;
+        }
+
+        .form-wrapper {
+            width: 100%;
+            max-width: 420px;
+        }
+
+        .form-wrapper h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .form-wrapper .subtitle {
+            text-align: center;
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        .input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-wrapper i {
+            position: absolute;
+            left: 14px;
+            color: #999;
+            font-size: 16px;
+        }
+
+        .input-wrapper input {
+            width: 100%;
+            padding: 12px 14px 12px 44px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #333;
+            background: #f9f9f9;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .input-wrapper input:focus {
+            outline: none;
+            border-color: #c0392b;
+            box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1);
+            background: #fff;
+        }
+
+        .input-wrapper input::placeholder {
+            color: #bbb;
+        }
+
+        /* Checkbox terms */
+        .terms {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .terms input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: #c0392b;
+            cursor: pointer;
+        }
+
+        .terms a {
+            color: #c0392b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .terms a:hover {
+            text-decoration: underline;
+        }
+
+        /* Register button */
+        .btn-register {
+            width: 100%;
+            padding: 14px;
+            background: #c0392b;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-register:hover {
+            background: #a93226;
+        }
+
+        /* Divider */
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 24px 0;
+            gap: 12px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #ddd;
+        }
+
+        .divider span {
+            font-size: 13px;
+            color: #888;
+            white-space: nowrap;
+        }
+
+        /* Social buttons */
+        .social-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .btn-social {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            cursor: pointer;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .btn-social:hover {
+            background: #f5f5f5;
+            border-color: #bbb;
+        }
+
+        .btn-social img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .btn-social .fa-facebook {
+            color: #1877f2;
+            font-size: 18px;
+        }
+
+        /* Login link */
+        .login-link {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .login-link a {
+            color: #c0392b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== RIGHT SIDE - BRANDING ===== */
+        .brand-side {
+            flex: 1;
+            background: linear-gradient(135deg, #5a0a0a 0%, #8b1a1a 40%, #6b0f0f 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 40px;
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Decorative circles */
+        .brand-side::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            top: -40px;
+            right: -40px;
+        }
+
+        .brand-side::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            bottom: 60px;
+            right: -30px;
+        }
+
+        .brand-circle-1 {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border: 2px solid rgba(255, 255, 255, 0.06);
+            border-radius: 50%;
+            bottom: -20px;
+            left: 40px;
+        }
+
+        .brand-circle-2 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 2px solid rgba(255, 255, 255, 0.06);
+            border-radius: 50%;
+            top: 120px;
+            left: -30px;
+        }
+
+        .brand-logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 16px;
+        }
+
+        .brand-name {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .brand-tagline {
+            font-size: 18px;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 16px;
+        }
+
+        .brand-description {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.6;
+            max-width: 380px;
+            margin-bottom: 40px;
+        }
+
+        /* Benefits */
+        .benefits {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: left;
+            position: relative;
+            z-index: 1;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .benefit-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .benefit-icon i {
+            font-size: 13px;
+            color: #5dde5d;
+        }
+
+        .benefit-text h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #f5c542;
+            margin-bottom: 2px;
+        }
+
+        .benefit-text p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .register-container {
+                flex-direction: column;
+            }
+
+            .brand-side {
+                padding: 40px 20px;
+                order: -1;
+            }
+
+            .form-side {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .form-wrapper h1 {
+                font-size: 24px;
+            }
+
+            .brand-name {
+                font-size: 28px;
+            }
+
+            .social-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <!-- Left Side - Registration Form -->
+        <div class="form-side">
+            <div class="form-wrapper">
+                <h1>Tạo tài khoản</h1>
+                <p class="subtitle">Tham gia cộng đồng yêu sách ngay hôm nay</p>
+
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="fullname">Họ và tên</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="text" id="fullname" name="fullname" placeholder="" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" id="email" name="email" placeholder="" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Số điện thoại</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="phone" name="phone" placeholder="" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Mật khẩu</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="password" name="password" placeholder="" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Xác nhận mật khẩu</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="" required>
+                        </div>
+                    </div>
+
+                    <div class="terms">
+                        <input type="checkbox" id="agreeTerms" required>
+                        <label for="agreeTerms">Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách bảo mật</a></label>
+                    </div>
+
+                    <button type="submit" class="btn-register">Đăng ký</button>
+                </form>
+
+                <div class="divider">
+                    <span>Hoặc đăng ký với</span>
+                </div>
+
+                <div class="social-buttons">
+                    <button type="button" class="btn-social">
+                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
+                        Google
+                    </button>
+                    <button type="button" class="btn-social">
+                        <i class="fa-brands fa-facebook"></i>
+                        Facebook
+                    </button>
+                </div>
+
+                <p class="login-link">Đã có tài khoản ? <a href="login.html">Đăng nhập</a></p>
+            </div>
+        </div>
+
+        <!-- Right Side - Branding -->
+        <div class="brand-side">
+            <div class="brand-circle-1"></div>
+            <div class="brand-circle-2"></div>
+
+            <img src="https://img.icons8.com/clouds/100/kaleidoscope.png" alt="Kaleidoscope Logo" class="brand-logo">
+            <h2 class="brand-name">Kaleidoscope</h2>
+            <p class="brand-tagline">Bởi vì sách là thế giới</p>
+            <p class="brand-description">
+                Khám phá thế giới manga, light novel và merch đa dạng.
+                Tham gia cùng hàng nghìn độc giả yêu thích truyện tranh Nhật Bản.
+            </p>
+
+            <div class="benefits">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <div class="benefit-text">
+                        <h4>Ưu đãi độc quyền</h4>
+                        <p>Giảm giá đặc biệt dành riêng cho thành viên</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <div class="benefit-text">
+                        <h4>Tích điểm thưởng</h4>
+                        <p>Mỗi đơn hàng đều được tích điểm đổi quà</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <div class="benefit-text">
+                        <h4>Thông báo sớm</h4>
+                        <p>Nhận thông tin về sách mới và flash sale</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
