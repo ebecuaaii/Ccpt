@@ -11,6 +11,7 @@ Website bán truyện tranh trực tuyến với giao diện thân thiện, hỗ
 | 3   | Trương Vĩnh Phúc    | TVPGH           |             |
 | 4   | Nguyễn Văn Thuân    | maiyeuminhem123 |             |
 | 5   | Trần Phúc Thành     | phucthanh1705   |             |
+| 6   | Huỳnh Thị Ngọc Tiên | ngoctien1712    |             |
 
 - Ghi chú thành viên 5: Trần Phúc Thành - MSSV: 2280602964
 
